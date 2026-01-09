@@ -455,8 +455,7 @@ jobs:
   build-gnu-toolchain:
     name: GNU Toolchain ${{ matrix.target }} (${{ matrix.host.name }})
     needs: setup
-    runs-on:
-      group: ${{ matrix.host.runner }}
+    runs-on: ubuntu-latest
     container: ${{ matrix.host.container }}
     timeout-minutes: 720
 
